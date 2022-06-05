@@ -10,7 +10,7 @@
     "test": "jest --config jestconfig.json --verbose"
   },
   "author": "author",
-  "license": "MIT OR Apache-2.0",
+  "license": "See license in LICENSE",
   "eslintConfig": {
     "root": true,
     "extends": [
