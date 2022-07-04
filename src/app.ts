@@ -31,6 +31,4 @@ app.get('/:name', (ctx) => {
   return ctx.redirect(`https://wah.rest/sticker/${name}/glitch-bread`, 301)
 })
 
-export async function handleRequest(event: FetchEvent): Promise<Response> {
-  return app.handleEvent(event)
-}
+export default app

@@ -1,13 +1,3 @@
 name = "glitchbread-redirector"
-type = "javascript"
-zone_id = ""
-account_id = ""
-route = ""
-workers_dev = true
-compatibility_date = "2022-05-01"
-
-[build]
-command = "npm install && npm run build"
-
-[build.upload]
-format = "service-worker"
+main = "src/index.ts"
+compatibility_date = "2022-07-04"
