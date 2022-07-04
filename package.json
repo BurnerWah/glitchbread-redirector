@@ -1,56 +1,31 @@
 {
-  "name": "worker-typescript-template",
-  "version": "1.0.0",
-  "description": "Cloudflare worker TypeScript template",
-  "main": "dist/worker.js",
+  "name": "glitchbread-redirector",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "build": "webpack",
-    "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
-    "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
-    "test": "jest --config jestconfig.json --verbose"
-  },
-  "author": "author",
-  "license": "See license in LICENSE",
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "typescript",
-      "prettier",
-      "plugin:regexp/recommended",
-      "plugin:sonarjs/recommended"
-    ],
-    "plugins": [
-      "eslint-plugin-optimize-regex",
-      "regexp",
-      "sonarjs"
-    ],
-    "rules": {
-      "optimize-regex/optimize-regex": "warn"
-    }
+    "start": "wrangler dev",
+    "deploy": "wrangler publish",
+    "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}'",
+    "lint:eslint": "eslint --max-warnings=0 src",
+    "lint:prettier": "prettier --check '*.{json,js}' 'src/**/*.{js,ts}'",
+    "lint": "concurrently 'npm:lint:*'"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^3.0.0",
-    "@types/itty-router-extras": "^0.4.0",
-    "@types/jest": "^28.1.1",
-    "@types/service-worker-mock": "^2.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "eslint": "^8.17.0",
-    "eslint-config-prettier": "^8.1.0",
+    "@cloudflare/workers-types": "^3.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.4",
+    "@typescript-eslint/parser": "^5.30.4",
+    "concurrently": "^7.2.2",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-optimize-regex": "^1.2.1",
     "eslint-plugin-regexp": "^1.7.0",
     "eslint-plugin-sonarjs": "^0.13.0",
-    "jest": "^28.1.0",
-    "prettier": "^2.3.0",
-    "service-worker-mock": "^2.0.5",
-    "ts-jest": "^28.0.4",
-    "ts-loader": "^9.2.2",
-    "typescript": "^4.3.2",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0"
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "wrangler": "2.0.15"
   },
   "dependencies": {
-    "hono": "^1.4.4"
+    "hono": "^1.6.1"
   }
 }
