@@ -1,3 +1,4 @@
 name = "glitchbread-redirector"
 main = "src/index.ts"
 compatibility_date = "2022-07-04"
+workers_dev = false
