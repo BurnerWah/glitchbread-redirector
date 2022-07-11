@@ -11,7 +11,7 @@
     "lint": "concurrently 'npm:lint:*'"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^3.14.0",
+    "@cloudflare/workers-types": "^3.14.1",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "concurrently": "^7.2.2",
