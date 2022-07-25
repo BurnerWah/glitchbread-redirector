@@ -27,6 +27,6 @@
     "wrangler": "2.0.22"
   },
   "dependencies": {
-    "hono": "^2.0.2"
+    "hono": "^2.0.5"
   }
 }
